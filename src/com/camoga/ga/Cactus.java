@@ -8,7 +8,7 @@ public class Cactus extends Entity {
 	public static final Vec2 shortCactus = new Vec2(16,16);
 	public static final Vec2 smallCactus = new Vec2(16,35);
 	public static final Vec2 mediumCactus = new Vec2(33,35);
-	public static final Vec2 largeCactus = new Vec2(40,35);
+	public static final Vec2 largeCactus = new Vec2(40,35); 
 	
 	public Cactus(Vec2 size, Vec2 pos) {
 		this.width = size.getX();

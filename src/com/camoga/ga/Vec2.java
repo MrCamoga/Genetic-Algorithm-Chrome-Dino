@@ -12,7 +12,7 @@ public class Vec2 {
 		this(0, 0);
 	}
 	
-	public Vec2 add(Vec2 v) {
+	public Vec2 add(Vec2 v) { 
 		this.x += v.x;
 		this.y += v.y;
 		return this;

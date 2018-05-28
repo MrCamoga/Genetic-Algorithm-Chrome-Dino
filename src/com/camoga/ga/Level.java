@@ -18,7 +18,7 @@ public class Level {
 	private Vec2 offset;
 	private static Vec2 stVel = new Vec2(5, 0);
 	
-	private int bestFitness = 0;
+	private int bestFitness = 0; 
 	private int generation = 1;
 	protected boolean bestDino = false;
 	

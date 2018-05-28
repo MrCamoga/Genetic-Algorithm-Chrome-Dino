@@ -10,7 +10,7 @@ public class Bird extends Entity {
 	public Bird(Vec2 pos) {
 		this.width = 15;
 		this.height = 15;
-		this.pos = pos;
+		this.pos = pos; 
 	}
 	
 	public void tick() {

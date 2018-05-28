@@ -16,10 +16,10 @@ public abstract class Entity {
 
 
 	public int getXScreen(Vec2 offset) {
-		return pos.getX()-offset.getX()+Main.WIDTH/2;
+		return pos.getX() - offset.getX() + Main.WIDTH/2;
 	}
 	
 	public int getYScreen(Vec2 offset) {
-		return pos.getY()-offset.getY()+Main.HEIGHT/2-height;
+		return pos.getY() - offset.getY() + Main.HEIGHT/2-height;
 	}
 }

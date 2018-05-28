@@ -64,7 +64,7 @@ public class Dinosaur {
 	
 	public void down() {
 		if(pos.getY() != 0 && !down) {
-			if(!down) vel.add(new Vec2(0,1));
+			if(!down) vel.add(new Vec2(0, 1));
 			down = true;	
 		}
 		currentSize = downSize;

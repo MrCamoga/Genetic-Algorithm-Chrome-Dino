@@ -24,7 +24,7 @@ public class Main extends Canvas {
 	
 	private Thread thread;
 	
-	private double ns = 1e9/60D;
+	private double ns = 1e9/60D; 
 	
 	public Main() {
 		createWindow();
