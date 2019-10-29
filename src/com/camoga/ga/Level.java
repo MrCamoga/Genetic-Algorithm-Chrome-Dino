@@ -3,6 +3,7 @@ package com.camoga.ga;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Random;
@@ -112,7 +113,7 @@ public class Level {
 
 	private void repopulate() {
 		generation++;
-		
+		Collections.shuffle(nextpopulation);
 		nextpopulation.sort(new Comparator<Dinosaur>() {
 			public int compare(Dinosaur d1, Dinosaur d2) {
 				return d2.fitness-d1.fitness;
@@ -126,8 +127,8 @@ public class Level {
 		
 		for(Dinosaur d : nextpopulation) {
 			population.add(new Dinosaur(d.brain.clone()));
-//			population.add(new Dinosaur(d.brain.clone().mutate(0.05, 0.8)));
-			population.add(new Dinosaur());
+			population.add(new Dinosaur(d.brain.clone().mutate(0.05, 0.3)));
+//			population.add(new Dinosaur());
 			if(population.size()==nextpopulation.size()) break;
 		}
 		
@@ -192,7 +193,7 @@ public class Level {
 		g.drawString("Score: " + timer, 600, 160);
 		
 		if(population.size()>0)
-		population.get(0).brain.render(g, 50,50,250, 250);
+		population.get(0).brain.renderNN(g, 50,50,250, 250);
 	}
 	
 	//FIXME

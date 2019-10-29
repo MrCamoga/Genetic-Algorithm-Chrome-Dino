@@ -41,7 +41,7 @@ public class Dinosaur {
 	}
 	
 	public void tick(double distance, double speed, double yvel, double entityheight, double height, double isJumping) {
-		double[] output = brain.feed(new double[] {distance/Main.WIDTH, speed/10, yvel/10, entityheight/Main.HEIGHT, height/Main.HEIGHT, isJumping});
+		double[] output = brain.feed(new double[] {1-distance/Main.WIDTH, speed/10, yvel/10, entityheight/Main.HEIGHT, height/Main.HEIGHT, isJumping});
 		if(output[0] > 0.5) jump();
 		if(output[1] > 0.5) down();
 		
